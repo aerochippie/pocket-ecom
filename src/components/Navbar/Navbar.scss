@@ -1,0 +1,42 @@
+.navbar {
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 1em;
+}
+
+h1 {
+    font-size: 5em;
+
+}
+.pocketdog img{
+    max-width: 100%;
+    height: auto;
+
+}
+.right{
+    text-align: center;
+
+
+}
+
+.cart{
+    display: flex;
+    position: relative;
+
+}
+span{
+    font-size: 1em;
+    background-color: #19ffdc;
+    color: white;
+    border-radius: 50%;
+    width: 1.1em;
+    height: 1.1em;
+position: absolute;
+right: -10px;
+top: -10px;
+
+}
