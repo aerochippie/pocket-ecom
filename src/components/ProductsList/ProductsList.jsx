@@ -1,7 +1,6 @@
 import React from 'react'
 import "./ProductsList.scss"
 import { Card } from '../Card/Card'
-import { Product } from '../../pages/Product/Product'
 
 import ApiData from '../../features/ApiData'
 import { urlProducts } from '../../utils/constants'
