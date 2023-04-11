@@ -14,7 +14,6 @@ import { Checkout } from "./pages/Checkout/Checkout";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
 
-import {id} from "./components/Card/Card"
 
 const Layout = () => {
   return (
@@ -40,7 +39,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/product/${id}",
+        path: "/product/:id",
         element: <Product />
       },
       {
