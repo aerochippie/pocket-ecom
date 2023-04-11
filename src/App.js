@@ -4,6 +4,8 @@ import {
   RouterProvider,
   Outlet
 } from "react-router-dom";
+
+
 import "./app.scss"
 import { Home } from "./pages/Home/Home";
 import { Product } from "./pages/Product/Product";
@@ -12,15 +14,19 @@ import { Checkout } from "./pages/Checkout/Checkout";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
 
+import {id} from "./components/Card/Card"
+
 const Layout = () => {
   return (
-    <div className="app">
 
+    <div className="App">
     <Navbar />
     <Outlet />
     <Footer />
 
     </div>
+
+
   )
 }
 
@@ -34,7 +40,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/product/:id",
+        path: "/product/${id}",
         element: <Product />
       },
       {
@@ -55,9 +61,7 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <div className="App">
       <RouterProvider router={router} />
-    </div>
   );
 }
 

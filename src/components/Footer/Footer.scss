@@ -1,0 +1,123 @@
+.footer{
+    background-color: rgb(255, 255, 255);
+}
+
+.footer-wrapper{
+    margin: 0 5em;
+}
+
+hr.divider {
+    border-top: 1px dotted rgb(119, 119, 119);
+}
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.socials-icons{
+    display: flex;
+    gap: 0.4em;
+}
+.socials-icons .link{
+    color: black;
+}
+.socials .newsletter input,
+button {
+    border-radius: 0%;
+    border: solid 1px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 1em;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+
+.socials .newsletter button {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+
+.socials .newsletter input::placeholder {
+    color: rgb(173, 173, 173);
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 5em;
+    padding: 1em 2em;
+}
+
+.menu .menu-navigate, .menu-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-link{
+    font-weight: 100;
+}
+.menu-link:hover{
+    color: aqua;
+}
+.menu p{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+.menu .short-about{
+    max-width: 40em;
+    font-weight: 100;
+
+}
+.menu .short-about h3{
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    
+}
+.payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.payment-image img{
+    max-width: 100%;
+    height: auto;
+}
+.copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7em;
+}
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em;
+        gap: 2em;
+    }
+
+    .socials .newsletter input,
+    button {
+        width: 90vw;
+    }
+    .socials .newsletter input::placeholder {
+        text-align: center;
+    }
+}

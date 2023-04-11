@@ -1,7 +1,6 @@
-.navbar {
-}
 
-.wrapper {
+
+.nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +27,7 @@ h1 {
     position: relative;
 
 }
-span{
+.right span{
     font-size: 1em;
     background-color: #19ffdc;
     color: white;

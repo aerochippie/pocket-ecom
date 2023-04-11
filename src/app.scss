@@ -5,7 +5,10 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
+.app{
+    display: flex;
+    flex-direction: column;
+}
 .link{
     text-decoration: none;
     color: inherit;

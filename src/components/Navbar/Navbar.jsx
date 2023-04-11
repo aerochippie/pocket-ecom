@@ -7,7 +7,7 @@ export const Navbar = () => {
   return (
 
     <div className='navbar'>
-        <div className="wrapper">
+        <div className="nav-wrapper">
             <div className="left">
               <div className="pocketdog">
                 <img src="/img/pocketdog.png" alt="illustration of a french bulldog inside a brown pocket" />
