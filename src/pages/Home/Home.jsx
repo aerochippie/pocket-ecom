@@ -1,10 +1,10 @@
 import React from 'react'
-import { Featured } from '../../components/Featured/Featured'
+import { ProductsList } from '../../components/ProductsList/ProductsList'
 
 export const Home = () => {
   return (
     <div className="">
-      < Featured/>
+      < ProductsList/>
     </div>
   )
 }

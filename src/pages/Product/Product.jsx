@@ -1,7 +1,62 @@
 import React from 'react'
+import "./Product.scss"
+import {useParams } from 'react-router-dom';
+import { urlProducts } from '../../utils/constants';
+import SingleData from "../../features/SingleData"
+
 
 export const Product = () => {
+  const params = useParams()
+  const id = params.id;
+  const newUrl = urlProducts + id
+  const {product} = SingleData(newUrl)
+  console.log(product.reviews)
+
+  const reviews = product.reviews;
+  console.log(reviews)
+
+
   return (
-    <div>Product</div>
+    <> 
+    <div className='product-container'>
+      <div className="product-left">
+      <div className="product-image"> <img src={product.imageUrl} alt="" /></div>
+      </div>
+     <div className="product-right">
+     <div className="product-title"> <h2> {product.title} </h2> </div>
+     <div className="details">
+      <div className="description"> <p> {product.description}</p> </div>
+    <div className="prices">
+      <div className="old-price">
+        <p>original price: {product.price}</p>
+      </div>
+      <div className="new-price">
+        <p>now only: {product.discountedPrice}</p>
+      </div>
+    </div>
+   
+    </div>
+    <button> Add to cart</button>
+     </div>
+    
+  </div>
+  {/* <div className="product-reviews">
+  <h3> Product Reviews</h3>
+    {reviews.map((rev)=>{
+      return (
+        <> 
+        
+        <div className="review-username"> {rev.username}</div>
+        <div className="review-description">
+          <p> {rev.description} </p>
+         <span> Rating: {rev.rating}</span></div>
+        </>
+      )
+     
+    }
+    
+    )}
+  </div> */}
+  </>
   )
 }
