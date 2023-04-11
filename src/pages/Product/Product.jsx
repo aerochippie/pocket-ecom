@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Product.scss"
 import {useParams } from 'react-router-dom';
 import { urlProducts } from '../../utils/constants';
 import SingleData from "../../features/SingleData"
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../redux/cartReducer'
 
 
 export const Product = () => {
@@ -10,12 +12,14 @@ export const Product = () => {
   const id = params.id;
   const newUrl = urlProducts + id
   const {product} = SingleData(newUrl)
+
+  const [quantity, setQuantity] = useState(1)
   console.log(product.reviews)
 
   const reviews = product.reviews;
   console.log(reviews)
 
-
+  const dispatch = useDispatch()
   return (
     <> 
     <div className='product-container'>
@@ -27,6 +31,8 @@ export const Product = () => {
      <div className="details">
       <div className="description"> <p> {product.description}</p> </div>
     <div className="prices">
+
+
       <div className="old-price">
         <p>original price: {product.price}</p>
       </div>
@@ -36,7 +42,20 @@ export const Product = () => {
     </div>
    
     </div>
-    <button> Add to cart</button>
+    <div className="quantity">
+    
+      <button onClick={()=>setQuantity((prev)=> prev === 1 ? 1 : prev - 1)}>-</button>
+      {quantity}
+      <button onClick={()=>setQuantity((prev)=> prev + 1)}>+</button>
+     
+    </div>
+    <button type="button" onClick={()=>dispatch(addToCart({
+                id:product.id,
+                title:product.title,
+                price:product.price,
+                image:product.imageUrl,
+                quantity
+            }))}> Add to cart</button>
      </div>
     
   </div>
