@@ -1,8 +1,6 @@
-import React from 'react'
-import "./Footer.scss"
- import { Link } from 'react-router-dom';
-
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import "./Footer.scss";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';

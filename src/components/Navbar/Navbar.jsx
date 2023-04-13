@@ -1,8 +1,8 @@
 import React from 'react'
-import "./Navbar.scss"
-import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import "./Navbar.scss"
+import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 
 export const Navbar = () => {
 

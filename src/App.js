@@ -4,18 +4,17 @@ import {
   RouterProvider,
   Outlet
 } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-
-import "./app.scss"
 import { Home } from "./pages/Home/Home";
 import { Product } from "./pages/Product/Product";
 import { Cart } from "./pages/Cart/Cart";
 import { Checkout } from "./pages/Checkout/Checkout";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
+import { ToastContainer } from 'react-toastify';
 
+import "./app.scss"
+import 'react-toastify/dist/ReactToastify.css';
 
 const Layout = () => {
   return (

@@ -1,13 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit'
 import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+
+
+
 export const cartSlice = createSlice({
   name: 'cart',
   initialState: {
     products:[]
   },
   reducers: {
-    addToCart: (state,action) => {
+
+    addToCart: (state, action) => {
       const notify = () => toast.success('Added to cart', {
         position: "top-right",
         autoClose: 2000,
@@ -17,24 +22,20 @@ export const cartSlice = createSlice({
         draggable: true,
         progress: undefined,
         theme: "dark",
-        })
-        notify()
+      })
+      notify()
 
- const item = state.products.find(item=>item.id === action.payload.id)
-     if(item){
-        item.quantity+=action.payload.quantity
-     } else {
+      const item = state.products.find(item => item.id === action.payload.id)
+      if (item) {
+        item.quantity += action.payload.quantity
+      } else {
         state.products.push(action.payload)
-     }
+      }
     },
-
 
     removeItem: (state, action) => {
-      state.products = state.products.filter(item=>item.id !== action.payload)
+      state.products = state.products.filter(item => item.id !== action.payload)
     },
-
-
-
 
     resetCart: (state) => {
       state.products = []
@@ -42,7 +43,5 @@ export const cartSlice = createSlice({
   }
 })
 
-// Action creators are generated for each case reducer function
-export const { addToCart, removeItem, resetCart } = cartSlice.actions
-
-export default cartSlice.reducer
+export const { addToCart, removeItem, resetCart } = cartSlice.actions;
+export default cartSlice.reducer;
