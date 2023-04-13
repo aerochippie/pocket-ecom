@@ -4,6 +4,8 @@ import {
   RouterProvider,
   Outlet
 } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import "./app.scss"
@@ -59,8 +61,14 @@ const router = createBrowserRouter([
 
 
 const App = () => {
+  
   return (
+    <> 
       <RouterProvider router={router} />
+      <ToastContainer
+
+/>
+</>
   );
 }
 
