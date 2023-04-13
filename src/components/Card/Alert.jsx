@@ -5,9 +5,9 @@ import { addToCart } from '../../redux/cartReducer'
 
 
 
-export const Alert = ({ id, title, price, image}) => {
+export const Alert = ({ id, title, price, image, quantity}) => {
 
-
+  
     const dispatch = useDispatch()
  ;
   return (
@@ -18,7 +18,8 @@ export const Alert = ({ id, title, price, image}) => {
         id:id,
         title:title,
         price:price,
-        image:image
+        image:image,
+        quantity 
     })) }> Add to cart </button>
     </div>
 

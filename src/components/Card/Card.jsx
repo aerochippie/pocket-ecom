@@ -1,5 +1,5 @@
-import React from 'react'
 import "./Card.scss"
+
 import { Link } from 'react-router-dom'
 import { Prices } from './Prices'
 import { Alert } from './Alert'
@@ -7,6 +7,7 @@ import { Alert } from './Alert'
 
 
 export const Card = ({ item, id }) => {
+    const quantity = 1;
     return (
 
         <div className="card">
@@ -21,7 +22,7 @@ export const Card = ({ item, id }) => {
                 <h3> {item.title} </h3>
                 < Prices price={item.price} newPrice={item.discountedPrice}/>
             </div>
-            < Alert  id={item.id} title={item.title} price={item.price} image={item.imageUrl}/>
+            < Alert  id={item.id} title={item.title} price={item.price} image={item.imageUrl} quantity={quantity}/>
 
 
         </div>
@@ -31,8 +32,3 @@ export const Card = ({ item, id }) => {
     )
 }
 
-
-
-{
-
-}

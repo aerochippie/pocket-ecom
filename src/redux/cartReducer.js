@@ -19,6 +19,7 @@ export const cartSlice = createSlice({
         theme: "dark",
         })
         notify()
+
  const item = state.products.find(item=>item.id === action.payload.id)
      if(item){
         item.quantity+=action.payload.quantity

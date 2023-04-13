@@ -19,15 +19,11 @@ import { Footer } from "./components/Footer/Footer";
 
 const Layout = () => {
   return (
-
     <div className="App">
     <Navbar />
     <Outlet />
     <Footer />
-
     </div>
-
-
   )
 }
 
@@ -61,13 +57,10 @@ const router = createBrowserRouter([
 
 
 const App = () => {
-  
   return (
     <> 
       <RouterProvider router={router} />
-      <ToastContainer
-
-/>
+      <ToastContainer />
 </>
   );
 }
