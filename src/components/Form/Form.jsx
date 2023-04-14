@@ -47,8 +47,10 @@ export const Form = () => {
         if (
             !nameError && !subjectError&& !emailError && !descriptionError
         ){
-            notify('Form submitted');
+           console.log('not passed')
 
+        }else {
+            notify('gj')
         }
     }
     
