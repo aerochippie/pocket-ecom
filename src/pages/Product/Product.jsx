@@ -15,8 +15,11 @@ export const Product = () => {
   const newUrl = urlProducts + id
   const { product } = SingleData(newUrl)
   const [quantity, setQuantity] = useState(1)
-  //const reviews = product.reviews;
+  const reviews = product.reviews;
   const dispatch = useDispatch()
+  const priceDiff =  100 - (product.discountedPrice / product.price) * 100;
+  const fixedPrice = priceDiff.toFixed(0)
+
 
 
   return (
@@ -35,6 +38,7 @@ export const Product = () => {
               </div>
               <div className="new-price">
                 <p>now only: {product.discountedPrice}</p>
+                <p> {fixedPrice}% off</p>
               </div>
             </div>
           </div>
@@ -54,9 +58,9 @@ export const Product = () => {
           }))}> Add to cart</button>
         </div>
       </div>
-      {/* <div className="product-reviews">
+      <div className="product-reviews">
   <h3> Product Reviews</h3>
-    {reviews.map((rev)=>{
+    {reviews?.map((rev)=>{
       return (
         <> 
         
@@ -70,7 +74,7 @@ export const Product = () => {
     }
     
     )}
-  </div> */}
+  </div>
     </>
   )
 }
