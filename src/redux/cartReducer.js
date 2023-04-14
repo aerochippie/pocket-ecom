@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
+import 'react-toastify/dist/ReactToastify.css';
+import { notify } from '../utils/constants';
 
 
 
@@ -13,17 +13,8 @@ export const cartSlice = createSlice({
   reducers: {
 
     addToCart: (state, action) => {
-      const notify = () => toast.success('Added to cart', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      })
-      notify()
+    
+      notify('Added to cart')
 
       const item = state.products.find(item => item.id === action.payload.id)
       if (item) {

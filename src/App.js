@@ -15,6 +15,7 @@ import { ToastContainer } from 'react-toastify';
 
 import "./app.scss"
 import 'react-toastify/dist/ReactToastify.css';
+import { Contact } from "./pages/Contact/Contact";
 
 const Layout = () => {
   return (
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         path: "/checkout",
         element: <Checkout />
       },
+      {
+        path: "/contact",
+        element: <Contact />
+      }
 
     ]
   }

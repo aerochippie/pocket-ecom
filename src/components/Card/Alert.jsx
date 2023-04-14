@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux'
 import { addToCart } from '../../redux/cartReducer'
 
 
-
-
 export const Alert = ({ id, title, price, image, quantity}) => {
 
     const dispatch = useDispatch();
