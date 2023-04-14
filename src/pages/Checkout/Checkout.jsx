@@ -9,6 +9,7 @@ export const Checkout = () => {
         <h2> Your order has been confirmed</h2>
         <p> find your order in emails</p>
         <Link to={'/contact'}> <p> contact</p> </Link>
+        <Link to={'/'}> <p> back to store!</p> </Link>
       </div>  </div>
 
  
